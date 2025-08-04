@@ -72,12 +72,12 @@ def sbm(ticker, interval="1d", backtest_year=2023, simulation_number=10000):
     print(f"Mean predicted price: {mean_final_price}")
     print(f"Max predicted price: {max_final_price}")
     print(f"Actual Price: {actual_final_price}")
-    print(f"Start Positon: {p_0.values[0]}")
+    print(f"Start Positon: {p_0}")
 
     # Plot the results
     plt.figure(figsize=(10,6))
     plt.plot(all_paths.T, color='blue', alpha=0.1)  # Transparency for better visibility
-    plt.title(f'Monte Carlo Simulation of Tesla Stock Price for {backtest_year+1}')
+    plt.title(f'Monte Carlo Simulation of {ticker} Stock Price for {backtest_year+1}')
     plt.xlabel('Time (days)')
     plt.ylabel('Stock Price (USD)')
     plt.show()
